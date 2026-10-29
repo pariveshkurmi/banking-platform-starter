@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.2.0, pluggy-1.7.0 -- /home/labuser/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/labuser/Desktop/Project/workspace
+plugins: anyio-4.13.0
+collecting ... collected 23 items
+
+tests/test_sanctions_check.py::test_clean_transaction_pass PASSED        [  4%]
+tests/test_sanctions_check.py::test_ofac_match_detection PASSED          [  8%]
+tests/test_sanctions_check.py::test_un_match_detection PASSED            [ 13%]
+tests/test_sanctions_check.py::test_eu_match_detection PASSED            [ 17%]
+tests/test_sanctions_check.py::test_missing_customer_id PASSED           [ 21%]
+tests/test_sanctions_check.py::test_invalid_customer_id_type PASSED      [ 26%]
+tests/test_sanctions_check.py::test_missing_counterparty_name PASSED     [ 30%]
+tests/test_sanctions_check.py::test_empty_counterparty_name PASSED       [ 34%]
+tests/test_sanctions_check.py::test_missing_counterparty_country PASSED  [ 39%]
+tests/test_sanctions_check.py::test_invalid_counterparty_details_type PASSED [ 43%]
+tests/test_sanctions_check.py::test_negative_transaction_amount PASSED   [ 47%]
+tests/test_sanctions_check.py::test_invalid_transaction_amount_type PASSED [ 52%]
+tests/test_sanctions_check.py::test_performance_under_200ms PASSED       [ 56%]
+tests/test_sanctions_check.py::test_performance_with_ofac_match PASSED   [ 60%]
+tests/test_sanctions_check.py::test_performance_with_multiple_matches PASSED [ 65%]
+tests/test_sanctions_check.py::test_high_risk_aml_lowers_threshold PASSED [ 69%]
+tests/test_sanctions_check.py::test_low_risk_aml_uses_base_threshold PASSED [ 73%]
+tests/test_sanctions_check.py::test_audit_log_created PASSED             [ 78%]
+tests/test_sanctions_check.py::test_no_pci_data_in_audit_log PASSED      [ 82%]
+tests/test_sanctions_check.py::test_api_error_returns_screening_failure PASSED [ 86%]
+tests/test_sanctions_check.py::test_case_insensitive_matching PASSED     [ 91%]
+tests/test_sanctions_check.py::test_zero_transaction_amount PASSED       [ 95%]
+tests/test_sanctions_check.py::test_no_aml_result_defaults_to_safe PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../venv/lib/python3.14/site-packages/anyio/pytest_plugin.py:14
+  /home/labuser/venv/lib/python3.14/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.
+  The CallSpec2 alias will be removed in pytest 10.
+  Update imports to use CallSpec instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed
+    from _pytest.python import CallSpec2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 23 passed, 1 warning in 0.27s =========================
